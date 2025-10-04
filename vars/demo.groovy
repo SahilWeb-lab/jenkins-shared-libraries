@@ -1,4 +1,3 @@
-// Create a function:
-def call() {
+def call(){
   echo "This is just testing...."
 }
