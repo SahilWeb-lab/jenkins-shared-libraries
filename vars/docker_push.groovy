@@ -1,5 +1,5 @@
 def call(String imageName, String imageTag) {
-  echo "Pushing code to dockerhub...."
+  echo "Pushing start to docker hub."
   withCredentials([usernamePassword(
       credentialsId:"DockerHubCredentials", 
       passwordVariable:"DockerHubPass", 
@@ -8,5 +8,5 @@ def call(String imageName, String imageTag) {
   // sh "docker image tag notes-app:latest ${env.DockerHubUser}/notes-app:latest"
   sh "docker push ${env.DockerHubUser}/${imageName}:${imageTag}"
   }
-  echo "Code Pushed Success!"
+  echo "Pushing finshed to docker hub."
 }
