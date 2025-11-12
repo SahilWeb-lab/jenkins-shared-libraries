@@ -1,7 +1,7 @@
 def call(String imageName, String imageTag) {
   echo "Pushing start to docker hub."
   withCredentials([usernamePassword(
-      credentialsId:"DockerHubCredentials", 
+      credentialsId:"DockerHub-Credentials", 
       passwordVariable:"DockerHubPass", 
       usernameVariable:"DockerHubUser")]) {
   sh "docker login -u ${env.DockerHubUser} -p ${env.DockerHubPass}"
